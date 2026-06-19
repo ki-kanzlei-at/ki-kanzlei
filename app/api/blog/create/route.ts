@@ -233,6 +233,17 @@ export async function POST(request: NextRequest) {
       console.warn("Sitemap update failed:", error.message);
     }
 
+    // GitHub-API-Commits triggern den Vercel-Deploy-Webhook nicht zuverlässig.
+    // Deploy Hook (falls gesetzt) anstoßen, damit der neue Post live geht.
+    const deployHook = process.env.VERCEL_DEPLOY_HOOK;
+    if (deployHook) {
+      try {
+        await fetch(deployHook, { method: "POST" });
+      } catch (error: any) {
+        console.warn("Deploy hook failed:", error.message);
+      }
+    }
+
     return NextResponse.json({
       success: true,
       message: commitMessage,
