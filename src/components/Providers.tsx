@@ -7,6 +7,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { CookieBanner } from "@/components/CookieBanner";
 import { CaptchaProvider } from "@/components/CaptchaProvider";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           <Toaster />
           <Sonner />
           <ScrollToTop />
+          <ScrollReveal />
           <AnalyticsTracker />
           {children}
           <CookieBanner />

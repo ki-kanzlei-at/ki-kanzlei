@@ -1,0 +1,40 @@
+/* Shared modern SVG animations (cherry-picked from /modern preview) */
+/* Keyframes are global; helper classes are scoped under .kk-anim */
+
+@keyframes kkbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes kkpulse2{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.15);opacity:.2}}
+@keyframes kkdrift{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-4px)}}
+@keyframes kkdash{to{stroke-dashoffset:-40}}
+@keyframes kkblinkeyes{0%,92%,100%{transform:scaleY(1)}94%,98%{transform:scaleY(.1)}}
+
+.kk-anim .illu{width:100%;height:100%;display:block}
+.kk-anim .bot-bob{animation:kkbob 4s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.kk-anim .bot-eye{animation:kkblinkeyes 5s infinite;transform-origin:center;transform-box:fill-box}
+.kk-anim .pulse-ring{animation:kkpulse2 2.4s ease-out infinite;transform-origin:center;transform-box:fill-box}
+.kk-anim .dash-line{stroke-dasharray:6 6;animation:kkdash 1.4s linear infinite}
+.kk-anim .drift-1{animation:kkdrift 3s ease-in-out infinite}
+.kk-anim .drift-2{animation:kkdrift 4s ease-in-out infinite reverse}
+
+/* floating hero chips */
+@keyframes kkfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes kklivepulse{0%{box-shadow:0 0 0 0 rgba(57,133,239,.5)}70%{box-shadow:0 0 0 8px rgba(57,133,239,0)}100%{box-shadow:0 0 0 0 rgba(57,133,239,0)}}
+
+.kk-anim .chip{
+  position:absolute;background:#fff;border:1px solid hsl(214 32% 91%);
+  border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:10px;
+  box-shadow:0 14px 40px rgba(15,30,60,.08),0 2px 6px rgba(15,30,60,.04);
+  font-size:13px;font-weight:500;color:#0e1a2b;white-space:nowrap;z-index:2;
+}
+.kk-anim .chip .ic{
+  width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  background:hsl(215 90% 96%);color:#3985ef;flex-shrink:0;
+}
+.kk-anim .chip .ic.live{position:relative}
+.kk-anim .chip .ic.live .livedot{
+  width:9px;height:9px;border-radius:50%;background:#3985ef;
+  box-shadow:0 0 0 0 rgba(57,133,239,.5);animation:kklivepulse 1.8s ease-out infinite;
+}
+.kk-anim .chip-1{top:6%;left:0;animation:kkfloat 7s ease-in-out infinite}
+.kk-anim .chip-2{top:16%;right:0;animation:kkfloat 8s ease-in-out infinite reverse}
+.kk-anim .chip-3{bottom:12%;left:3%;animation:kkfloat 7.5s ease-in-out infinite reverse}
+@media (max-width:640px){.kk-anim .chip{font-size:11px;padding:7px 9px;gap:6px}.kk-anim .chip .ic{width:20px;height:20px}}

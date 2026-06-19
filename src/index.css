@@ -198,10 +198,7 @@ All colors MUST be HSL.
   .gradient-bg {
     background: linear-gradient(180deg,
         hsl(var(--primary) / 0.08) 0%,
-        hsl(var(--background)) 20%,
-        hsl(var(--primary) / 0.06) 40%,
-        hsl(var(--background)) 60%,
-        hsl(var(--primary) / 0.08) 80%,
+        hsl(var(--background)) 30%,
         hsl(var(--background)) 100%);
   }
 
@@ -256,6 +253,29 @@ All colors MUST be HSL.
     }
   }
 
+  /* Scroll-Reveal: dezentes Einblenden beim Scrollen. Progressive Enhancement
+     (Klasse wird nur per JS gesetzt) und respektiert prefers-reduced-motion. */
+  .kk-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .kk-reveal.kk-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kk-reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
   @keyframes float {
 
     0%,
@@ -280,6 +300,19 @@ All colors MUST be HSL.
   @media (max-width: 768px) {
     .animate-scroll-right-to-left {
       animation: scrollRightToLeft 20s linear infinite;
+    }
+  }
+
+  /* Full-width marquee row */
+  .kk-marquee {
+    animation: scrollRightToLeft 90s linear infinite;
+  }
+  .kk-marquee-group:hover .kk-marquee {
+    animation-play-state: paused;
+  }
+  @media (max-width: 768px) {
+    .kk-marquee {
+      animation: scrollRightToLeft 55s linear infinite;
     }
   }
 

@@ -3,10 +3,11 @@
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { NavigationHome } from "@/components/NavigationHome";
-import { Footer } from "@/components/Footer";
+import { FooterModern } from "@/components/FooterModern";
 import type { BlogPost as BlogPostType } from "@/data/blogPosts";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 interface BlogPostProps {
   initialPost: BlogPostType;
@@ -41,12 +42,12 @@ const BlogPost = ({ initialPost, initialPosts }: BlogPostProps) => {
             </Link>
           </div>
 
-          <article className="bg-card rounded-2xl border border-border overflow-hidden slide-up">
+          <article className="bg-card rounded-2xl border-2 border-border overflow-hidden slide-up">
             <div className="p-6 sm:p-8 md:p-12">
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm">
+                <Badge variant="outline" className="rounded-full bg-primary/10 text-primary border-primary/20">
                   {currentPost.category}
-                </span>
+                </Badge>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Calendar className="w-4 h-4" />
                   {formatDate(currentPost.date)}
@@ -83,7 +84,7 @@ const BlogPost = ({ initialPost, initialPosts }: BlogPostProps) => {
             </div>
           </article>
 
-          <div className="mt-12 p-6 sm:p-8 bg-primary/5 rounded-2xl border border-primary/10 text-center slide-up">
+          <div className="mt-12 p-6 sm:p-8 bg-primary/5 rounded-2xl border-2 border-primary/20 text-center slide-up">
             <h2 className="text-xl sm:text-2xl font-bold mb-4">
               Interessiert an KI-Automatisierung?
             </h2>
@@ -118,20 +119,23 @@ const BlogPost = ({ initialPost, initialPosts }: BlogPostProps) => {
                     <Link
                       key={relatedPost.slug}
                       href={`/blog/${relatedPost.slug}`}
-                      className="group block p-6 bg-card rounded-xl border border-border hover-lift transition-base"
+                      className="group block p-6 bg-card rounded-xl border-2 border-border hover-lift transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
                     >
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                        <span className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs">
+                        <Badge variant="outline" className="rounded-full bg-primary/10 text-primary border-primary/20 text-xs">
                           {relatedPost.category}
-                        </span>
+                        </Badge>
                         <span>{formatDate(relatedPost.date)}</span>
                       </div>
                       <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
                         {relatedPost.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
+                      <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
                         {relatedPost.excerpt}
                       </p>
+                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                        Weiterlesen <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </span>
                     </Link>
                   ))}
               </div>
@@ -139,7 +143,7 @@ const BlogPost = ({ initialPost, initialPosts }: BlogPostProps) => {
           )}
         </div>
       </main>
-      <Footer />
+      <FooterModern />
     </div>
   );
 };

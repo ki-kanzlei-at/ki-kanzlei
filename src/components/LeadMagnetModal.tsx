@@ -152,7 +152,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                         <span className="text-primary italic">KOSTENLOS nur für dich.</span>
                                     </DialogTitle>
                                     <DialogDescription className="text-gray-500 text-sm sm:text-lg font-medium leading-relaxed">
-                                        Direkter Einblick in die Tools und Prozesse, die wir bei unseren Kunden in Österreich wirklich implementieren.
+                                        Direkter Einblick in die Tools und Prozesse, die wir bei unseren Kunden im DACH-Raum wirklich implementieren.
                                     </DialogDescription>
                                 </DialogHeader>
                             </div>

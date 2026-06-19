@@ -11,14 +11,9 @@ Die KI Kanzlei ist ein führendes Beratungs- und Implementierungsunternehmen fü
 - **KI-Beratung:** Strategische und technische Beratung zu KI-Einsatz, Prozessanalyse und Implementierungsplanung.
 
 ## Produkte
-- **LinkedIn Outreach Agent:** Automatisierte LinkedIn-Akquise mit KI-Personalisierung
-- **Cold Email Outreach Agent:** KI-gestützte E-Mail-Kampagnen
-- **SEO & Content Agent:** Automatisierte Content-Erstellung und SEO-Optimierung
-- **KI-Wissensdatenbank (RAG Agent):** Intelligente Wissensdatenbank mit Retrieval-Augmented Generation
-- **KI-Anrufassistent:** Intelligenter Telefonassistent powered by fonio.ai
-- **KI Multi-Channel Automatisierung:** Zentrale Kommunikation über alle Kanäle
-- **Persönliche KI-Sekretärin:** Ihr digitaler Assistent für tägliche Aufgaben
-- **Individuelle KI-Workflow-Entwicklung:** Maßgeschneiderte Automatisierungslösungen
+- **firmeo (Outreach-Plattform, Beta):** KI-Outreach-Plattform für Neukundengewinnung: Leadsuche, AI Researcher, Lead-Scoring, E-Mail- und LinkedIn-Kampagnen, Social Media und Unified Inbox, DSGVO-konform. Startet bald in der Beta unter firmeo.ai, Details: /produkte/firmeo
+- **Individuelle KI-Workflows & Agenten:** Maßgeschneiderte Automatisierung als n8n-Workflows (z. B. LinkedIn-/Cold-Email-Outreach, RAG-Wissensdatenbank, Multi-Channel-Automatisierung) auf Ihre Prozesse zugeschnitten.
+- **In Planung:** eine eigene KI-Wissensdatenbank-App als Produkt. Weitere KI-Produkte folgen Schritt für Schritt.
 
 ## Branchenspezifische Lösungen
 Wir bieten maßgeschneiderte KI-Systeme für folgende Sektoren:
@@ -59,41 +54,123 @@ Wir suchen laufend Unterstützung in folgenden Bereichen:
 - **Web:** https://ki-kanzlei.at
 - **E-Mail:** info@ki-kanzlei.at
 - **Telefon:** +43 664 2314676
-- **Live-Demo Anna:** +43 1 4351606
+- **Live-Demo Anna:** +43 720 080 697
 - **LinkedIn:** https://at.linkedin.com/company/ki-kanzlei-at
 - **Instagram:** https://www.instagram.com/kikanzlei
 - **Facebook:** https://www.facebook.com/people/KI-Kanzlei-KI-Automatisierung-für-Unternehmen/61587854979745/
 
+
 ## Vollständige URL-Struktur
 
 ### Hauptseite
-- [/](https://ki-kanzlei.at/) - Home (Zentrale KI-Automatisierung)
+- [/](https://ki-kanzlei.at/) - Home (KI-Automatisierung Österreich)
 
-### Branchen-Lösungen
-- [/ki-loesungen-psychotherapeuten](https://ki-kanzlei.at/ki-loesungen-psychotherapeuten) - KI für Psychotherapeuten & Praxen
-- [/ki-loesungen-hotels](https://ki-kanzlei.at/ki-loesungen-hotels) - KI für Hotels & Tourismus
-- [/ki-loesungen-hausverwaltung](https://ki-kanzlei.at/ki-loesungen-hausverwaltung) - KI für Hausverwaltungen
-- [/ki-loesungen-immobilienmakler](https://ki-kanzlei.at/ki-loesungen-immobilienmakler) - KI für Immobilienmakler
-- [/ki-loesungen-autohaus](https://ki-kanzlei.at/ki-loesungen-autohaus) - KI für Autohäuser & Werkstätten
-- [/ki-loesungen-handwerker](https://ki-kanzlei.at/ki-loesungen-handwerker) - KI für Handwerk & Gewerbe
-- [/ki-loesungen-rechtsanwaelte](https://ki-kanzlei.at/ki-loesungen-rechtsanwaelte) - KI für Rechtsanwälte & Kanzleien
-- [/ki-loesungen-aerzte](https://ki-kanzlei.at/ki-loesungen-aerzte) - KI für Ärzte & Fachärzte
-- [/ki-loesungen-recruiting](https://ki-kanzlei.at/ki-loesungen-recruiting) - KI für HR & Recruiting
-- [/ki-loesungen-fitness](https://ki-kanzlei.at/ki-loesungen-fitness) - KI für Fitnessstudios & Sportbetriebe
-- [/ki-loesungen-ecommerce](https://ki-kanzlei.at/ki-loesungen-ecommerce) - KI für E-Commerce & Online-Handel
-- [/ki-loesungen-oeffentliche-einrichtungen](https://ki-kanzlei.at/ki-loesungen-oeffentliche-einrichtungen) - KI für öffentliche Verwaltung
-- [/ki-loesungen-steuerberater](https://ki-kanzlei.at/ki-loesungen-steuerberater) - KI für Steuerberater & Kanzleien
-- [/ki-loesungen-versicherungsmakler](https://ki-kanzlei.at/ki-loesungen-versicherungsmakler) - KI für Versicherungsmakler
+### Zentrale Seiten & Hubs
+- [/leistungen](https://ki-kanzlei.at/leistungen) - Leistungen
+- [/branchen](https://ki-kanzlei.at/branchen) - Branchen
+- [/produkte](https://ki-kanzlei.at/produkte) - Produkte
+- [/ki-assessment](https://ki-kanzlei.at/ki-assessment) - KI Assessment
+- [/ki-glossar](https://ki-kanzlei.at/ki-glossar) - KI Glossar
+- [/blog](https://ki-kanzlei.at/blog) - Blog
+- [/ueber-uns](https://ki-kanzlei.at/ueber-uns) - Ueber Uns
+- [/kontakt](https://ki-kanzlei.at/kontakt) - Kontakt
 
-### Blog & Wissen
-- [/blog](https://ki-kanzlei.at/blog) - Wissensmagazin (KI-Insights & Best Practices)
+### Leistungen (alle)
+- [/leistungen/3d-planung-ki](https://ki-kanzlei.at/leistungen/3d-planung-ki) - 3d Planung KI
+- [/leistungen/agentic-ai](https://ki-kanzlei.at/leistungen/agentic-ai) - Agentic AI
+- [/leistungen/apache-airflow](https://ki-kanzlei.at/leistungen/apache-airflow) - Apache Airflow
+- [/leistungen/apache-kafka](https://ki-kanzlei.at/leistungen/apache-kafka) - Apache Kafka
+- [/leistungen/app-mit-ki](https://ki-kanzlei.at/leistungen/app-mit-ki) - App Mit KI
+- [/leistungen/autonome-ki-agenten](https://ki-kanzlei.at/leistungen/autonome-ki-agenten) - Autonome KI Agenten
+- [/leistungen/aws-bedrock](https://ki-kanzlei.at/leistungen/aws-bedrock) - AWS Bedrock
+- [/leistungen/azure-ai](https://ki-kanzlei.at/leistungen/azure-ai) - Azure AI
+- [/leistungen/chatgpt-alternative](https://ki-kanzlei.at/leistungen/chatgpt-alternative) - Chatgpt Alternative
+- [/leistungen/claude-schulung](https://ki-kanzlei.at/leistungen/claude-schulung) - Claude Schulung
+- [/leistungen/computer-vision](https://ki-kanzlei.at/leistungen/computer-vision) - Computer Vision
+- [/leistungen/data-engineering](https://ki-kanzlei.at/leistungen/data-engineering) - Data Engineering
+- [/leistungen/data-warehouse](https://ki-kanzlei.at/leistungen/data-warehouse) - Data Warehouse
+- [/leistungen/databricks](https://ki-kanzlei.at/leistungen/databricks) - Databricks
+- [/leistungen/docker](https://ki-kanzlei.at/leistungen/docker) - Docker
+- [/leistungen/etl](https://ki-kanzlei.at/leistungen/etl) - ETL
+- [/leistungen/eu-ai-act](https://ki-kanzlei.at/leistungen/eu-ai-act) - EU AI Act
+- [/leistungen/feature-store](https://ki-kanzlei.at/leistungen/feature-store) - Feature Store
+- [/leistungen/fine-tuning](https://ki-kanzlei.at/leistungen/fine-tuning) - Fine Tuning
+- [/leistungen/generative-engine-optimization](https://ki-kanzlei.at/leistungen/generative-engine-optimization) - Generative Engine Optimization
+- [/leistungen/higgsfield-ai](https://ki-kanzlei.at/leistungen/higgsfield-ai) - Higgsfield AI
+- [/leistungen/hugging-face](https://ki-kanzlei.at/leistungen/hugging-face) - Hugging Face
+- [/leistungen/ki-bildgenerator](https://ki-kanzlei.at/leistungen/ki-bildgenerator) - KI Bildgenerator
+- [/leistungen/ki-chatbot](https://ki-kanzlei.at/leistungen/ki-chatbot) - KI Chatbot
+- [/leistungen/ki-consulting](https://ki-kanzlei.at/leistungen/ki-consulting) - KI Consulting
+- [/leistungen/ki-schulung](https://ki-kanzlei.at/leistungen/ki-schulung) - KI Schulung
+- [/leistungen/ki-softwareentwicklung](https://ki-kanzlei.at/leistungen/ki-softwareentwicklung) - KI Softwareentwicklung
+- [/leistungen/ki-video](https://ki-kanzlei.at/leistungen/ki-video) - KI Video
+- [/leistungen/ki-website](https://ki-kanzlei.at/leistungen/ki-website) - KI Website
+- [/leistungen/ki-wissensdatenbank](https://ki-kanzlei.at/leistungen/ki-wissensdatenbank) - KI Wissensdatenbank
+- [/leistungen/kubernetes](https://ki-kanzlei.at/leistungen/kubernetes) - Kubernetes
+- [/leistungen/langchain](https://ki-kanzlei.at/leistungen/langchain) - Langchain
+- [/leistungen/make](https://ki-kanzlei.at/leistungen/make) - Make
+- [/leistungen/mcp-server](https://ki-kanzlei.at/leistungen/mcp-server) - MCP Server
+- [/leistungen/meta-ads-ki](https://ki-kanzlei.at/leistungen/meta-ads-ki) - Meta Ads KI
+- [/leistungen/mlflow](https://ki-kanzlei.at/leistungen/mlflow) - MLflow
+- [/leistungen/mlops](https://ki-kanzlei.at/leistungen/mlops) - MLOps
+- [/leistungen/monitoring-grafana](https://ki-kanzlei.at/leistungen/monitoring-grafana) - Monitoring Grafana
+- [/leistungen/n8n-automatisierung](https://ki-kanzlei.at/leistungen/n8n-automatisierung) - n8n Automatisierung
+- [/leistungen/ollama](https://ki-kanzlei.at/leistungen/ollama) - Ollama
+- [/leistungen/power-bi](https://ki-kanzlei.at/leistungen/power-bi) - Power Bi
+- [/leistungen/private-ai](https://ki-kanzlei.at/leistungen/private-ai) - Private AI
+- [/leistungen/prompt-engineering](https://ki-kanzlei.at/leistungen/prompt-engineering) - Prompt Engineering
+- [/leistungen/rpa](https://ki-kanzlei.at/leistungen/rpa) - RPA
+- [/leistungen/runway](https://ki-kanzlei.at/leistungen/runway) - Runway
+- [/leistungen/sap-integration](https://ki-kanzlei.at/leistungen/sap-integration) - SAP Integration
+- [/leistungen/snowflake](https://ki-kanzlei.at/leistungen/snowflake) - Snowflake
+- [/leistungen/social-media-ki](https://ki-kanzlei.at/leistungen/social-media-ki) - Social Media KI
+- [/leistungen/sora](https://ki-kanzlei.at/leistungen/sora) - Sora
+- [/leistungen/tableau](https://ki-kanzlei.at/leistungen/tableau) - Tableau
+- [/leistungen/vector-database](https://ki-kanzlei.at/leistungen/vector-database) - Vector Database
+- [/leistungen/veo](https://ki-kanzlei.at/leistungen/veo) - Veo
+- [/leistungen/vertex-ai](https://ki-kanzlei.at/leistungen/vertex-ai) - Vertex AI
+- [/leistungen/vllm](https://ki-kanzlei.at/leistungen/vllm) - vLLM
+- [/leistungen/voicebot](https://ki-kanzlei.at/leistungen/voicebot) - Voicebot
+- [/leistungen/zapier](https://ki-kanzlei.at/leistungen/zapier) - Zapier
+
+### Produkte
+- [/produkte/firmeo](https://ki-kanzlei.at/produkte/firmeo) - Firmeo
+
+### Branchen-Lösungen (alle)
+- [/branchen/ki-loesungen-aerzte](https://ki-kanzlei.at/branchen/ki-loesungen-aerzte) - KI für Aerzte
+- [/branchen/ki-loesungen-architekten](https://ki-kanzlei.at/branchen/ki-loesungen-architekten) - KI für Architekten
+- [/branchen/ki-loesungen-autohaus](https://ki-kanzlei.at/branchen/ki-loesungen-autohaus) - KI für Autohaus
+- [/branchen/ki-loesungen-banken](https://ki-kanzlei.at/branchen/ki-loesungen-banken) - KI für Banken
+- [/branchen/ki-loesungen-bau](https://ki-kanzlei.at/branchen/ki-loesungen-bau) - KI für Bau
+- [/branchen/ki-loesungen-ecommerce](https://ki-kanzlei.at/branchen/ki-loesungen-ecommerce) - KI für Ecommerce
+- [/branchen/ki-loesungen-energie](https://ki-kanzlei.at/branchen/ki-loesungen-energie) - KI für Energie
+- [/branchen/ki-loesungen-fitness](https://ki-kanzlei.at/branchen/ki-loesungen-fitness) - KI für Fitness
+- [/branchen/ki-loesungen-gastronomie](https://ki-kanzlei.at/branchen/ki-loesungen-gastronomie) - KI für Gastronomie
+- [/branchen/ki-loesungen-handwerker](https://ki-kanzlei.at/branchen/ki-loesungen-handwerker) - KI für Handwerker
+- [/branchen/ki-loesungen-hausverwaltung](https://ki-kanzlei.at/branchen/ki-loesungen-hausverwaltung) - KI für Hausverwaltung
+- [/branchen/ki-loesungen-hotels](https://ki-kanzlei.at/branchen/ki-loesungen-hotels) - KI für Hotels
+- [/branchen/ki-loesungen-immobilienmakler](https://ki-kanzlei.at/branchen/ki-loesungen-immobilienmakler) - KI für Immobilienmakler
+- [/branchen/ki-loesungen-industrie](https://ki-kanzlei.at/branchen/ki-loesungen-industrie) - KI für Industrie
+- [/branchen/ki-loesungen-logistik](https://ki-kanzlei.at/branchen/ki-loesungen-logistik) - KI für Logistik
+- [/branchen/ki-loesungen-marketingagenturen](https://ki-kanzlei.at/branchen/ki-loesungen-marketingagenturen) - KI für Marketingagenturen
+- [/branchen/ki-loesungen-oeffentliche-einrichtungen](https://ki-kanzlei.at/branchen/ki-loesungen-oeffentliche-einrichtungen) - KI für Oeffentliche Einrichtungen
+- [/branchen/ki-loesungen-psychotherapeuten](https://ki-kanzlei.at/branchen/ki-loesungen-psychotherapeuten) - KI für Psychotherapeuten
+- [/branchen/ki-loesungen-rechtsanwaelte](https://ki-kanzlei.at/branchen/ki-loesungen-rechtsanwaelte) - KI für Rechtsanwaelte
+- [/branchen/ki-loesungen-recruiting](https://ki-kanzlei.at/branchen/ki-loesungen-recruiting) - KI für Recruiting
+- [/branchen/ki-loesungen-steuerberater](https://ki-kanzlei.at/branchen/ki-loesungen-steuerberater) - KI für Steuerberater
+- [/branchen/ki-loesungen-versicherungsmakler](https://ki-kanzlei.at/branchen/ki-loesungen-versicherungsmakler) - KI für Versicherungsmakler
+
+### Vergleiche
+- [/vergleich/chatgpt-vs-claude](https://ki-kanzlei.at/vergleich/chatgpt-vs-claude) - Vergleich: Chatgpt Vs Claude
+- [/vergleich/n8n-vs-zapier-vs-make](https://ki-kanzlei.at/vergleich/n8n-vs-zapier-vs-make) - Vergleich: n8n Vs Zapier Vs Make
+- [/vergleich/voicebot-vs-callcenter](https://ki-kanzlei.at/vergleich/voicebot-vs-callcenter) - Vergleich: Voicebot Vs Callcenter
 
 ### Karriere
-- [/jobs](https://ki-kanzlei.at/jobs) - Karriere Übersicht
-- [/jobs/vertriebspartner-ki](https://ki-kanzlei.at/jobs/vertriebspartner-ki) - Job: Vertriebspartner KI
-- [/jobs/n8n-experte-ki-entwickler](https://ki-kanzlei.at/jobs/n8n-experte-ki-entwickler) - Job: n8n Experte / KI Entwickler
+- [/jobs](https://ki-kanzlei.at/jobs) - Jobs
+- [/jobs/n8n-experte-ki-entwickler](https://ki-kanzlei.at/jobs/n8n-experte-ki-entwickler) - n8n Experte KI Entwickler
+- [/jobs/vertriebspartner-ki](https://ki-kanzlei.at/jobs/vertriebspartner-ki) - Vertriebspartner KI
 
 ### Rechtliches
-- [/impressum](https://ki-kanzlei.at/impressum) - Impressum & Rechtliches
-- [/datenschutz](https://ki-kanzlei.at/datenschutz) - Datenschutz & DSGVO
-- [/agb](https://ki-kanzlei.at/agb) - Allgemeine Geschäftsbedingungen (AGB)
+- [/impressum](https://ki-kanzlei.at/impressum) - Impressum
+- [/datenschutz](https://ki-kanzlei.at/datenschutz) - Datenschutz
+- [/agb](https://ki-kanzlei.at/agb) - Agb

@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import Link from 'next/link';
 import { loadBlogPosts } from "@/data/blogPostsLoader";
 import { BlogPost } from "@/data/blogPosts";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export const BlogSectionHome = () => {
     const [latestPosts, setLatestPosts] = useState<BlogPost[]>([]);
@@ -37,21 +38,20 @@ export const BlogSectionHome = () => {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div className="max-w-2xl space-y-4">
-                        <div className="inline-flex px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary text-sm font-medium">
-                            KI-Insights & Best Practices
-                        </div>
+                        <Badge variant="outline" className="rounded-full mb-4 bg-primary/10 text-primary border-primary/20">
+                            Blog & News
+                        </Badge>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
                             Aktuelles aus der Welt der <br />
-                            <span className="text-primary italic">KI-Automatisierung.</span>
+                            <span className="text-primary">KI-Automatisierung</span>
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            Wir teilen unser Wissen aus echten Kundenprojekten, damit Sie Fehler vermeiden und das volle Potenzial von KI ausschöpfen können.
+                            Wir teilen unser Wissen aus echten Kundenprojekten zu KI Automatisierung, Voicebots und KI Beratung, damit Sie Fehler vermeiden und das volle Potenzial von KI ausschöpfen.
                         </p>
                     </div>
-                    <Button asChild variant="outline" className="hidden md:flex rounded-xl hover:bg-primary/5 hover:text-primary border-border font-bold transition-all">
-                        <Link href="/blog" className="flex items-center gap-2">
+                    <Button asChild variant="outline" size="lg" className="hidden md:flex">
+                        <Link href="/blog">
                             Alle Beiträge lesen
-                            <ArrowRight className="w-4 h-4" />
                         </Link>
                     </Button>
                 </div>
@@ -61,7 +61,7 @@ export const BlogSectionHome = () => {
                     {latestPosts.map((post, index) => (
                         <article
                             key={post.slug}
-                            className="group bg-card rounded-2xl border border-border hover-lift cursor-pointer overflow-hidden slide-up"
+                            className="group bg-card rounded-2xl border border-border hover-lift hover:border-primary/40 transition-base cursor-pointer overflow-hidden slide-up"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <Link href={`/blog/${post.slug}`} className="block">
@@ -109,7 +109,6 @@ export const BlogSectionHome = () => {
                                                 {formatDate(post.date)}
                                             </div>
                                         </div>
-                                        <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </div>
                             </Link>
@@ -119,10 +118,9 @@ export const BlogSectionHome = () => {
 
                 {/* Mobile Button */}
                 <div className="mt-10 md:hidden">
-                    <Button asChild variant="outline" className="w-full h-14 rounded-2xl border-border font-bold">
-                        <Link href="/blog" className="flex items-center justify-center gap-2">
+                    <Button asChild variant="outline" size="lg" className="w-full">
+                        <Link href="/blog">
                             Alle Beiträge lesen
-                            <ArrowRight className="w-5 h-5" />
                         </Link>
                     </Button>
                 </div>

@@ -1,24 +1,24 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Phone } from "lucide-react";
 
 export const VoiceAgentSection = () => {
     return (
         <section id="loesungen" className="section-spacing overflow-hidden bg-white/50 backdrop-blur-sm relative">
             <div className="container px-4 mx-auto relative z-10">
                 <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6 slide-up">
-                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse mr-2"></span>
-                        <span className="text-xs font-bold text-primary  tracking-wider">Neu</span>
-                    </div>
+                    <Badge variant="outline" className="rounded-full mb-4 bg-primary/10 text-primary border-primary/20">
+                        Live-Demo
+                    </Badge>
 
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 slide-up" style={{ animationDelay: "100ms" }}>
                         Testen Sie unsere <span className="text-primary">digitale Berater:in Anna</span>
                     </h2>
 
                     <p className="text-lg text-muted-foreground max-w-2xl slide-up" style={{ animationDelay: "200ms" }}>
-                        Anna versteht natürliche Sprache, antwortet in Echtzeit und klingt dabei verblüffend echt.
+                        Voicebot und KI-Telefonassistent in einem: Anna versteht natürliche Sprache, antwortet in Echtzeit und klingt dabei verblüffend echt.
                     </p>
                 </div>
 
@@ -36,14 +36,21 @@ export const VoiceAgentSection = () => {
 
                             {/* Symbolic Waveforms */}
                             <div className="relative flex items-end gap-1 h-12">
-                                {[...Array(6)].map((_, i) => (
+                                {[
+                                    { h: 45, d: 1.2 },
+                                    { h: 70, d: 1.5 },
+                                    { h: 55, d: 1.1 },
+                                    { h: 85, d: 1.4 },
+                                    { h: 35, d: 1.3 },
+                                    { h: 60, d: 1.6 },
+                                ].map((bar, i) => (
                                     <div
                                         key={i}
                                         className="w-1.5 bg-white rounded-full animate-voice-wave"
                                         style={{
-                                            height: `${20 + Math.random() * 80}%`,
+                                            height: `${bar.h}%`,
                                             animationDelay: `${i * 150}ms`,
-                                            animationDuration: `${1 + Math.random()}s`
+                                            animationDuration: `${bar.d}s`,
                                         }}
                                     ></div>
                                 ))}
@@ -52,16 +59,15 @@ export const VoiceAgentSection = () => {
                     </div>
 
                     <div className="mt-16 flex flex-col sm:flex-row gap-4 items-center slide-up" style={{ animationDelay: "400ms" }}>
-                        <Button size="lg" className="rounded-full px-8 h-14 text-lg font-bold group bg-primary hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25" asChild>
-                            <a href="tel:+4314351606">
-                                <Phone className="mr-2 h-5 w-5 animate-bounce" />
+                        <Button size="lg" asChild>
+                            <a href="tel:+43720080697">
+                                <Phone className="mr-2 h-4 w-4" />
                                 Jetzt anrufen
-                                <ArrowRight className="ml-2 h-5 w-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                             </a>
                         </Button>
 
-                        <span className="text-sm text-muted-foreground italic">
-                            Keine Wartezeit • 24/7 erreichbar
+                        <span className="text-sm text-muted-foreground">
+                            Keine Wartezeit, 24/7 erreichbar
                         </span>
                     </div>
 

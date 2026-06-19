@@ -1,144 +1,160 @@
-'use client';
-
-import { useEffect } from "react";
 import { NavigationHome } from "@/components/NavigationHome";
-import { Footer } from "@/components/Footer";
+import { FooterModern } from "@/components/FooterModern";
+import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Layers, Cpu, Zap, Settings, Database, ArrowRight, Code } from "lucide-react";
-import Link from 'next/link';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowLeft, Layers, Cpu, Zap, Database, ArrowRight, Code } from "lucide-react";
+import Link from "next/link";
 
-const JobAutomation = () => {
-    useEffect(() => {
-        document.title = "n8n Experte / KI Entwickler (m/w/d) – Jobs KI Kanzlei";
+const techStack = [
+    "n8n",
+    "OpenAI / Anthropic",
+    "REST APIs",
+    "JavaScript",
+    "Supabase / SQL",
+    "Python (nice to have)",
+];
 
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-            metaDescription = document.createElement('meta');
-            metaDescription.setAttribute('name', 'description');
-            document.head.appendChild(metaDescription);
-        }
-        metaDescription.setAttribute('content', 'Job als n8n Experte & KI Entwickler. Baue Workflow-Automatisierungen und KI-Agenten für österreichische Unternehmen. 100% Remote, Freelance, spannende Projekte.');
-        window.scrollTo(0, 0);
-    }, []);
+const benefits = [
+    {
+        icon: Zap,
+        title: "Fokus auf Resultate",
+        text: "Wir arbeiten asynchron und verzichten auf unnötige Meetings. Was zählt, ist die Qualität der Workflows.",
+    },
+    {
+        icon: Database,
+        title: "Spannende Projekte",
+        text: "Du entwickelst Systeme, die wirklich im Einsatz sind. Keine graue Theorie, sondern echte Hilfe für Unternehmen.",
+    },
+    {
+        icon: Code,
+        title: "Austausch mit Markus",
+        text: "Markus steht dir bei technischen Fragen zur Seite. Wir finden gemeinsam die beste Lösung für jede Herausforderung.",
+    },
+];
 
+const N8nExperteKI = () => {
     return (
         <div className="min-h-screen gradient-bg">
             <NavigationHome />
-
-            <main className="pt-32 pb-24">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        {/* Back Link - rechts ausgerichtet */}
-                        <div className="flex justify-end mb-10">
-                            <Link href="/jobs" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+            <main>
+                {/* HERO */}
+                <section className="gradient-hero overflow-hidden pt-32 md:pt-40 pb-16 md:pb-24">
+                    <div className="container mx-auto px-4 max-w-4xl">
+                        <div className="flex justify-end mb-8">
+                            <Link href="/jobs" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                                 <ArrowLeft className="w-4 h-4" /> Zurück zur Übersicht
                             </Link>
                         </div>
-
-                        {/* Header */}
-                        <div className="space-y-6 mb-16">
+                        <div className="space-y-6">
                             <div className="flex flex-wrap items-center gap-3">
-                                <Badge className="bg-primary/10 text-primary border-none rounded-full px-4 py-1.5 text-sm font-medium">
+                                <Badge variant="outline" className="rounded-full bg-primary/10 text-primary border-primary/20">
                                     Freelance
                                 </Badge>
                                 <span className="text-muted-foreground text-sm">100% Remote</span>
                             </div>
-                            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                                 n8n Experte / KI Entwickler <span className="text-primary">(m/w/d)</span>
                             </h1>
-                            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
                                 Du baust gerne Dinge, die funktionieren? n8n, APIs, LLMs sind keine Fremdwörter für dich? Dann lass uns reden.
                             </p>
                         </div>
+                    </div>
+                </section>
 
-                        {/* Content Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                            <div className="bg-white/80 backdrop-blur-sm border border-border rounded-3xl p-8">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                                    <Layers className="w-6 h-6 text-primary" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-4">Was du machst</h3>
-                                <p className="text-muted-foreground leading-relaxed">
-                                    Du baust Automatisierungen für echte Unternehmen. n8n-Workflows designen, APIs anbinden, LLMs integrieren und dafür sorgen, dass alles stabil läuft. Keine Spielerei, sondern Produktionssysteme.
-                                </p>
-                            </div>
+                {/* WAS DU MACHST / WOMIT WIR ARBEITEN */}
+                <section className="section-spacing bg-white/50">
+                    <div className="container mx-auto px-4 max-w-4xl">
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <Card className="border-2 hover-lift">
+                                <CardHeader>
+                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
+                                        <Layers className="w-6 h-6 text-primary" />
+                                    </div>
+                                    <CardTitle className="text-xl">Was du machst</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Du baust Automatisierungen für echte Unternehmen. n8n-Workflows designen, APIs anbinden, LLMs integrieren und dafür sorgen, dass alles stabil läuft. Keine Spielerei, sondern Produktionssysteme.
+                                    </p>
+                                </CardContent>
+                            </Card>
 
-                            <div className="bg-white/80 backdrop-blur-sm border border-border rounded-3xl p-8">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                                    <Cpu className="w-6 h-6 text-primary" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-4">Womit wir arbeiten</h3>
-                                <ul className="grid grid-cols-2 gap-3 text-muted-foreground text-sm">
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        n8n
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        OpenAI / Anthropic
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        REST APIs
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        JavaScript
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        Supabase / SQL
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        Python (nice to have)
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        {/* Benefits */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 border-y border-border py-10">
-                            <div className="space-y-2">
-                                <Zap className="w-6 h-6 text-primary" />
-                                <h4 className="font-bold">Fokus auf Resultate</h4>
-                                <p className="text-sm text-muted-foreground">Wir arbeiten asynchron und verzichten auf unnötige Meetings. Was zählt, ist die Qualität der Workflows.</p>
-                            </div>
-                            <div className="space-y-2">
-                                <Database className="w-6 h-6 text-primary" />
-                                <h4 className="font-bold">Spannende Projekte</h4>
-                                <p className="text-sm text-muted-foreground">Du entwickelst Systeme, die wirklich im Einsatz sind. Keine graue Theorie, sondern echte Hilfe für Unternehmen.</p>
-                            </div>
-                            <div className="space-y-2">
-                                <Code className="w-6 h-6 text-primary" />
-                                <h4 className="font-bold">Austausch mit Markus</h4>
-                                <p className="text-sm text-muted-foreground">Markus steht dir bei technischen Fragen zur Seite. Wir finden gemeinsam die beste Lösung für jede Herausforderung.</p>
-                            </div>
-                        </div>
-
-                        {/* CTA */}
-                        <div className="bg-white/80 backdrop-blur-sm border border-border rounded-3xl p-10 text-center">
-                            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                                Interesse?
-                            </h2>
-                            <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-                                Schick uns einen Link zu deinem GitHub oder zeig uns ein paar n8n-Workflows, auf die du stolz bist. Wir wollen sehen, was du kannst.
-                            </p>
-                            <Button size="lg" className="w-full sm:w-auto" asChild>
-                                <a href="mailto:info@ki-kanzlei.at?subject=Bewerbung%20n8n%20Experte%20KI%20Entwickler">
-                                    Jetzt bewerben
-                                    <ArrowRight className="w-4 h-4 ml-2" />
-                                </a>
-                            </Button>
+                            <Card className="border-2 hover-lift">
+                                <CardHeader>
+                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
+                                        <Cpu className="w-6 h-6 text-primary" />
+                                    </div>
+                                    <CardTitle className="text-xl">Womit wir arbeiten</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <ul className="grid grid-cols-2 gap-3 text-muted-foreground text-sm">
+                                        {techStack.map((tech) => (
+                                            <li key={tech} className="flex items-center gap-2">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                                                {tech}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </CardContent>
+                            </Card>
                         </div>
                     </div>
-                </div>
-            </main>
+                </section>
 
-            <Footer />
+                {/* BENEFITS */}
+                <section className="section-spacing">
+                    <div className="container mx-auto px-4 max-w-6xl">
+                        <div className="text-center mb-12">
+                            <Badge variant="outline" className="rounded-full mb-4 bg-primary/10 text-primary border-primary/20">Was dich erwartet</Badge>
+                            <h2 className="text-3xl md:text-4xl font-bold">Warum du bei uns richtig bist</h2>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-5">
+                            {benefits.map((b, i) => {
+                                const Icon = b.icon;
+                                return (
+                                    <Card key={i} className="hover-lift border-2">
+                                        <CardHeader className="pb-3">
+                                            <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
+                                                <Icon className="w-5 h-5 text-primary" />
+                                            </div>
+                                            <CardTitle className="text-lg">{b.title}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent><p className="text-muted-foreground leading-relaxed text-sm">{b.text}</p></CardContent>
+                                    </Card>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+
+                {/* CTA */}
+                <section className="section-spacing bg-white/50">
+                    <div className="container mx-auto px-4 max-w-4xl">
+                        <Card className="border-2 border-primary/20 bg-primary/5">
+                            <CardContent className="p-10 sm:p-14 text-center">
+                                <h2 className="text-3xl sm:text-4xl font-bold mb-4">Interesse?</h2>
+                                <p className="text-muted-foreground text-lg mb-8 max-w-md mx-auto">
+                                    Schick uns einen Link zu deinem GitHub oder zeig uns ein paar n8n-Workflows, auf die du stolz bist. Wir wollen sehen, was du kannst.
+                                </p>
+                                <Button size="lg" className="w-full sm:w-auto" asChild>
+                                    <a href="mailto:info@ki-kanzlei.at?subject=Bewerbung%20n8n%20Experte%20KI%20Entwickler">
+                                        Jetzt bewerben
+                                        <ArrowRight className="w-4 h-4 ml-2" />
+                                    </a>
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </section>
+
+                <ContactForm />
+            </main>
+            <FooterModern />
         </div>
     );
 };
 
-export default JobAutomation;
+export default N8nExperteKI;

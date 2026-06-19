@@ -6,13 +6,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ki-kanzlei.at"),
   title: {
-    default: "KI Kanzlei – KI-Automatisierung für Unternehmen | Österreich",
+    default: "KI Kanzlei: KI-Automatisierung für Unternehmen | DACH-Raum",
     template: "%s | KI Kanzlei",
   },
   description:
-    "KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. Von Wissensdatenbanken bis KI-Agenten – DSGVO-konform & einsatzbereit in 30 Tagen. Jetzt beraten lassen!",
+    "KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. Von Wissensdatenbanken bis KI-Agenten, DSGVO-konform & einsatzbereit in 30 Tagen. Jetzt beraten lassen!",
   keywords:
-    "KI Kanzlei, KI-Automatisierung Österreich, KI-Lösungen Unternehmen, Wissensdatenbank, Workflow-Automatisierung, KI-Agenten, DSGVO konform",
+    "KI Kanzlei, KI-Automatisierung Österreich, KI-Automatisierung DACH-Raum, KI-Lösungen Unternehmen Deutschland Schweiz, Wissensdatenbank, Workflow-Automatisierung, KI-Agenten, DSGVO konform",
   authors: [{ name: "KI Kanzlei - Arnold Freissling & Markus Wallner" }],
   robots: { index: true, follow: true },
   openGraph: {
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
     locale: "de_AT",
     url: "https://ki-kanzlei.at",
     siteName: "KI Kanzlei",
-    title: "KI Kanzlei – KI-Automatisierung für Unternehmen | Österreich",
+    title: "KI Kanzlei: KI-Automatisierung für Unternehmen | DACH-Raum",
     description:
-      "KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. Wir implementieren KI-Lösungen für Unternehmen – DSGVO-konform, in 30 Tagen einsatzbereit.",
+      "KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. Wir implementieren KI-Lösungen für Unternehmen, DSGVO-konform, in 30 Tagen einsatzbereit.",
     images: [{ url: "/img/logo-premium.png", width: 400, height: 400 }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@ki_kanzlei",
-    title: "KI Kanzlei – KI-Automatisierung für Unternehmen | Österreich",
+    title: "KI Kanzlei: KI-Automatisierung für Unternehmen | DACH-Raum",
     description:
       "KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. DSGVO-konform, in 30 Tagen einsatzbereit.",
     images: ["/img/logo-premium.png"],
@@ -52,10 +52,16 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#3B82F6" />
+        <meta name="theme-color" content="#3985ef" />
         <link rel="preconnect" href="https://fonts.cdnfonts.com" />
         <link
           href="https://fonts.cdnfonts.com/css/satoshi"
+          rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
         {/* Google Consent Mode v2 Default State */}
@@ -110,6 +116,38 @@ export default function RootLayout({
               ],
               areaServed: { "@type": "Country", name: "Austria" },
             }),
+          }}
+        />
+        {/* Organization + WebSite Schema (Rich Results, sameAs) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "KI Kanzlei",
+                url: "https://ki-kanzlei.at",
+                logo: "https://ki-kanzlei.at/img/logo-premium.png",
+                email: "info@ki-kanzlei.at",
+                telephone: "+436642314676",
+                foundingLocation: "Rossatz, Niederösterreich, Österreich",
+                areaServed: ["AT", "DE", "CH"],
+                sameAs: [
+                  "https://at.linkedin.com/in/arnold-freissling-95642b256",
+                  "https://at.linkedin.com/in/markuswallner-social-media-marketing",
+                  "https://www.linkedin.com/in/yasmin-berndorfer-984084281/",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "KI Kanzlei",
+                url: "https://ki-kanzlei.at",
+                inLanguage: "de-AT",
+                publisher: { "@type": "Organization", name: "KI Kanzlei" },
+              },
+            ]),
           }}
         />
       </head>

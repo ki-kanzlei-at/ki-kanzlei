@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { X, Cookie, Settings } from "lucide-react";
+import { X, Settings } from "lucide-react";
+import { CookieGlyph } from "@/components/CookieGlyph";
 import { initGA, updateGAConsent } from "@/lib/analytics";
 
 export const CookieBanner = () => {
@@ -75,8 +76,8 @@ export const CookieBanner = () => {
           // Main Banner
           <div className="p-4">
             <div className="flex items-start gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Cookie className="w-4 h-4 text-primary" />
+              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 shadow-sm shadow-primary/30">
+                <CookieGlyph className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1">
                 <h3 className="text-sm font-bold text-gray-900 mb-1">
@@ -139,8 +140,8 @@ export const CookieBanner = () => {
             <div className="space-y-3 mb-4">
               {/* Necessary Cookies */}
               <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                  <Cookie className="w-3 h-3 text-green-600" />
+                <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CookieGlyph className="w-3.5 h-3.5 text-primary" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-1">

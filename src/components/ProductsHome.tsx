@@ -30,7 +30,7 @@ const outreachProducts = [
         badge: "Scale Agent",
         description: "Automatisierte B2B-Neukundengewinnung per E-Mail. Generiert hyper-personalisierte Nachrichten basierend auf Website-Daten und garantiert maximale Zustellbarkeit.",
         setup: "€4.190 inkl. USt.",
-        monthly: "€290–€510 inkl. USt.",
+        monthly: "€290-€510 inkl. USt.",
         icon: Mail,
         tech: ["Google Sheets", "Firmendaten", "Nodemailer", "n8n"],
     },
@@ -39,7 +39,7 @@ const outreachProducts = [
         badge: "Organic Growth",
         description: "KI-Agent für organische Sichtbarkeit. Identifiziert Content-Chancen, schreibt SEO-optimierte Fachartikel und veröffentlicht diese vollautomatisch.",
         setup: "€3.890 inkl. USt.",
-        monthly: "€290–€370 inkl. USt.",
+        monthly: "€290-€370 inkl. USt.",
         icon: Search,
         tech: ["Sitemap Parser", "Gemini Imagen", "ImgBB", "Custom CMS"],
     },
@@ -64,7 +64,7 @@ const generalProducts = [
     },
     {
         title: "KI Multi-Channel Automatisierung",
-        description: "Alle Anfragen, ein System – E-Mail, WhatsApp, Formulare automatisiert beantwortet durch einen einheitlichen KI-Agenten.",
+        description: "Alle Anfragen, ein System - E-Mail, WhatsApp, Formulare automatisiert beantwortet durch einen einheitlichen KI-Agenten.",
         setup: "€3.890 inkl. USt.",
         monthly: "€360-490 inkl. USt.",
         icon: MessageSquare,
@@ -145,7 +145,7 @@ export const ProductsHome = () => {
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">Unsere KI-Lösungen</h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Von der Neukundengewinnung bis zur internen Effizienzsteigerung –
+                        Von der Neukundengewinnung bis zur internen Effizienzsteigerung -
                         wir bauen die passenden KI-Agenten für Ihr Unternehmen.
                     </p>
                 </div>

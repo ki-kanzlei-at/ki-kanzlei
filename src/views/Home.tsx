@@ -8,19 +8,22 @@ import { ProductsHome } from "@/components/ProductsHome";
 import { PressSection } from "@/components/PressSection";
 import { IndustriesHome } from "@/components/IndustriesHome";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
+import { LeistungenHome } from "@/components/LeistungenHome";
+import { AssessmentCenterHome } from "@/components/AssessmentCenterHome";
 import { AboutUs } from "@/components/AboutUs";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
 import { FAQHome } from "@/components/FAQHome";
 import { JobsSectionHome } from "@/components/JobsSectionHome";
-import { Footer } from "@/components/Footer";
+import { FooterModern } from "@/components/FooterModern";
+import { TestimonialsHome } from "@/components/TestimonialsHome";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
 
 const Home = () => {
   const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "KI Kanzlei – KI-Automatisierung für Unternehmen | Österreich";
+    document.title = "KI Automatisierung & KI Agentur für Unternehmen | KI Kanzlei Österreich";
 
     // Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -29,7 +32,7 @@ const Home = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. Von Wissensdatenbanken bis KI-Agenten – DSGVO-konform & einsatzbereit in 30 Tagen. Jetzt beraten lassen!');
+    metaDescription.setAttribute('content', 'KI Kanzlei: Voice-Agenten, KI Chatbots, Wissensdatenbanken (RAG) und n8n-Automatisierung für KMU. DSGVO-konform, EU-gehostet, in 30 Tagen live. Jetzt kostenloses KI Audit sichern.');
   }, []);
 
   return (
@@ -41,14 +44,17 @@ const Home = () => {
         {/* <PressSection /> */}
         {/* <ProductsHome /> */}
         <VoiceAgentSection />
+        <LeistungenHome />
+        <AssessmentCenterHome />
         <IndustriesHome />
         <AboutUs />
-<BlogSectionHome />
+        <TestimonialsHome />
+        <FAQHome />
+        <BlogSectionHome />
         <JobsSectionHome />
         <ContactForm />
-        <FAQHome />
       </main>
-      <Footer />
+      <FooterModern />
       <LeadMagnetModal isOpen={isLeadModalOpen} onOpenChange={setIsLeadModalOpen} />
     </div>
   );

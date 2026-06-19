@@ -1,0 +1,60 @@
+/* Cool modern footer, scoped under .kk-foot. Self-contained, literal brand colors. */
+
+.kk-foot{
+  background:linear-gradient(165deg,#5a9bf7 0%,#3985ef 50%,#1f6fd6 100%);
+  color:#fff;padding:80px 48px 0;position:relative;overflow:hidden;border-radius:36px 36px 0 0;
+  margin:80px 0 0;
+  font-family:'Satoshi','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.kk-foot *{box-sizing:border-box}
+.kk-foot-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+
+.kk-foot-top{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:32px;padding-bottom:56px}
+
+.kk-foot-logo-word{display:inline-block;margin-bottom:16px;text-decoration:none}
+.kk-foot-logo-word img{height:32px;width:auto;display:block}
+.kk-foot-brand p{font-size:14px;color:rgba(255,255,255,.92);line-height:1.6;margin:0 0 16px;max-width:34ch}
+.kk-foot-contact{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.kk-foot-contact li{font-size:14px;color:rgba(255,255,255,.9)}
+.kk-foot-contact a{color:rgba(255,255,255,.9);text-decoration:none;transition:color .15s}
+.kk-foot-contact a:hover{color:#fff}
+
+.kk-foot-col h5{font-size:13px;font-weight:700;color:#cfe2ff;margin:0 0 14px;letter-spacing:.06em;text-transform:uppercase}
+.kk-foot-col a{display:block;color:#fff;opacity:.88;font-size:15px;padding:5px 0;text-decoration:none;transition:opacity .15s,transform .15s}
+.kk-foot-col a:hover{opacity:1;transform:translateX(3px)}
+
+.kk-foot-wordmark{
+  font-family:'Satoshi','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-style:normal;font-weight:500;
+  font-size:clamp(44px,13vw,300px);line-height:.8;letter-spacing:-.04em;color:#fff;
+  background:linear-gradient(180deg,#ffffff 0%,#bcd6ff 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  text-align:center;padding:8px 0 0;user-select:none;white-space:nowrap;
+}
+.kk-foot-bot{position:absolute;left:50%;bottom:-18%;transform:translateX(-50%);width:280px;height:280px;z-index:1}
+
+.kk-foot-legal{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:24px 0;font-size:13px;color:rgba(255,255,255,.8);
+  flex-wrap:wrap;gap:12px;position:relative;z-index:2;
+}
+.kk-foot-legal-links{display:flex;gap:18px;flex-wrap:wrap}
+.kk-foot-legal-links a{color:#fff;opacity:.8;text-decoration:none;transition:opacity .15s,transform .15s}
+.kk-foot-legal-links a:hover{opacity:1;transform:translateX(3px)}
+
+@media (max-width:900px){
+  .kk-foot{padding:56px 24px 0}
+  .kk-foot-top{grid-template-columns:repeat(2,1fr);gap:28px 24px;padding-bottom:48px}
+  .kk-foot-bot{width:150px;height:150px;bottom:-10%}
+  .kk-foot-wordmark{font-size:clamp(40px,15vw,120px);padding-bottom:8px}
+  .kk-foot-legal{flex-direction:column;align-items:center;text-align:center;gap:10px;padding:20px 0 28px}
+  .kk-foot-legal-links{justify-content:center}
+}
+
+@media (max-width:560px){
+  .kk-foot{padding:48px 20px 0;border-radius:28px 28px 0 0}
+  .kk-foot-top{grid-template-columns:1fr;gap:32px;padding-bottom:40px}
+  .kk-foot-brand{margin-bottom:4px}
+  .kk-foot-col h5{margin-bottom:10px}
+  .kk-foot-col a{font-size:16px;padding:7px 0}
+  .kk-foot-bot{width:120px;height:120px;bottom:-8%}
+}

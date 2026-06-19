@@ -55,7 +55,7 @@ export const PressSection = () => {
                                 </blockquote>
                             </div>
                             <div className="text-xs font-bold uppercase tracking-wider text-gray-400">
-                                — {item.source}
+                                - {item.source}
                             </div>
                         </motion.div>
                     ))}

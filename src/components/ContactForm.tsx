@@ -67,10 +67,10 @@ export const ContactForm = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-up">
-            Bereit für Ihr kostenloses Analysegespräch?
+            Bereit für Ihr kostenloses Erstgespräch?
           </h2>
           <p className="text-lg text-muted-foreground slide-up">
-            In 30 Minuten analysieren wir Ihre Praxisprozesse und zeigen Ihnen, wie Sie mit KI 8-10 Stunden pro Woche sparen können. Unverbindlich und kostenlos.
+            In einem kostenlosen, unverbindlichen Erstgespräch klären wir Ihre Ausgangslage und zeigen, wo KI bei Ihnen am schnellsten wirkt. Für die volle Analyse gibt es das KI Assessment Center, voll auf die Umsetzung anrechenbar.
           </p>
         </div>
 

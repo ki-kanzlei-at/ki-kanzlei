@@ -1,104 +1,106 @@
-'use client';
+import { NavigationHome } from "@/components/NavigationHome";
+import { FooterModern } from "@/components/FooterModern";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Building2, MapPin, Phone, Mail, ShieldCheck, FileText, Landmark, ScrollText } from "lucide-react";
 
-import { useEffect } from "react";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+const angaben = [
+  { icon: Building2, label: "Medieninhaber", value: "Arnold Freissling" },
+  { icon: MapPin, label: "Anschrift", value: "Rossatzbach 3/2, 3602 Rossatz" },
+  { icon: Phone, label: "Telefon", value: "+43 664 2314676", href: "tel:+436642314676" },
+  { icon: Mail, label: "E-Mail", value: "info@ki-kanzlei.at", href: "mailto:info@ki-kanzlei.at" },
+  { icon: Landmark, label: "Zuständige Aufsichtsbehörde", value: "Bezirkshauptmannschaft Krems" },
+  { icon: FileText, label: "UID", value: "ATU82628738" },
+  { icon: ScrollText, label: "Gewerbe", value: "Unternehmensberater für Marketing und Vertrieb" },
+];
+
+const weitere = [
+  {
+    label: "Mitglied der österreichischen Wirtschaftskammer",
+    node: (
+      <a href="https://www.wko.at/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+        www.wko.at
+      </a>
+    ),
+  },
+  { label: "Gewerberechtliche Vorschriften", node: "Gewerbeordnung (www.ris.bka.gv.at)" },
+  {
+    label: "Nutzungsvorbehalt gemäß § 42h Abs 6 UrhG",
+    node: "Dem Text-Mining von Inhalten dieser Website wird ausdrücklich widersprochen.",
+  },
+  {
+    label: "Blattlinie",
+    node: "Informationen rund um das Thema (digitaler) Vertrieb und Automatisierung von Vertrieb",
+  },
+];
 
 const Impressum = () => {
-  useEffect(() => {
-    document.title = "Impressum | KI Kanzlei – KI-Automatisierung für Unternehmen";
-
-    // Meta Description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', 'Impressum der KI Kanzlei – Informationen über das Unternehmen, Kontaktmöglichkeiten und rechtliche Hinweise gemäß ECG und MedienG.');
-  }, []);
-
   return (
     <div className="min-h-screen gradient-bg">
-      <Navigation />
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-white rounded-2xl shadow-lg border border-border p-8 md:p-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-up text-center">
-              Impressum
-            </h1>
-
-            <div className="space-y-8 text-gray-700 slide-up text-center">
-              {/* Impressum gemäß ECG */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Impressum gemäß § 5 ECG und § 25 MedienG
-                </h2>
-
-                <div className="space-y-4 max-w-2xl mx-auto">
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Medieninhaber:</span>
-                    <span className="text-gray-600 ml-2">Arnold Freissling</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Anschrift:</span>
-                    <span className="text-gray-600 ml-2">Rossatzbach 3/2, 3602 Rossatz</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Telefonnummer:</span>
-                    <span className="text-gray-600 ml-2">+43 664 2314676</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">E-Mail:</span>
-                    <span className="text-gray-600 ml-2">info@ki-kanzlei.at</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Zuständige Aufsichtsbehörde:</span>
-                    <span className="text-gray-600 ml-2">Bezirkshauptmannschaft Krems</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">UID:</span>
-                    <span className="text-gray-600 ml-2">ATU82628738</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Gewerbe:</span>
-                    <span className="text-gray-600 ml-2">Unternehmensberater für Marketing und Vertrieb</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Mitglied der österreichischen Wirtschaftskammer:</span>
-                    <a href="https://www.wko.at/" className="text-primary hover:text-primary/80 transition-colors ml-2" target="_blank" rel="noopener noreferrer">
-                      https://www.wko.at/
-                    </a>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Gewerberechtliche Vorschriften:</span>
-                    <span className="text-gray-600 ml-2">Gewerbeordnung (www.ris.bka.gv.at)</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Nutzungsvorbehalt gemäß § 42h Abs 6 UrhG:</span>
-                    <span className="text-gray-600 ml-2">Dem Text-Mining von Inhalten dieser Website wird ausdrücklich widersprochen.</span>
-                  </div>
-
-                  <div className="text-center">
-                    <span className="font-semibold text-gray-700">Blattlinie:</span>
-                    <span className="text-gray-600 ml-2">Informationen rund um das Thema (digitaler) Vertrieb und Automatisierung von Vertrieb</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <NavigationHome />
+      <main>
+        {/* HERO */}
+        <section className="pt-32 md:pt-40 pb-12 md:pb-16">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <Badge variant="outline" className="rounded-full mb-5 bg-primary/10 text-primary border-primary/20">
+              Rechtliches
+            </Badge>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">Impressum</h1>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Angaben gemäß § 5 ECG und § 25 MedienG zur KI Kanzlei.
+            </p>
           </div>
-        </div>
+        </section>
+
+        {/* INHALT */}
+        <section className="pb-16 md:pb-24">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <Card className="border-2">
+              <CardContent className="p-6 md:p-10">
+                <div className="flex items-center gap-2 mb-6">
+                  <ShieldCheck className="w-5 h-5 text-primary" />
+                  <h2 className="text-xl md:text-2xl font-bold text-foreground">
+                    Impressum gemäß § 5 ECG und § 25 MedienG
+                  </h2>
+                </div>
+
+                <dl className="divide-y divide-border">
+                  {angaben.map((a) => {
+                    const Icon = a.icon;
+                    return (
+                      <div key={a.label} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 py-3.5">
+                        <dt className="flex items-center gap-2 text-sm font-medium text-foreground sm:w-1/3 shrink-0">
+                          <Icon className="w-4 h-4 text-primary shrink-0" />
+                          {a.label}
+                        </dt>
+                        <dd className="text-muted-foreground sm:flex-1">
+                          {a.href ? (
+                            <a href={a.href} className="text-primary hover:underline">
+                              {a.value}
+                            </a>
+                          ) : (
+                            a.value
+                          )}
+                        </dd>
+                      </div>
+                    );
+                  })}
+                </dl>
+
+                <div className="mt-8 space-y-5 border-t border-border pt-8">
+                  {weitere.map((w) => (
+                    <div key={w.label}>
+                      <div className="text-sm font-semibold text-foreground mb-1">{w.label}</div>
+                      <div className="text-muted-foreground leading-relaxed">{w.node}</div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
       </main>
-      <Footer />
+      <FooterModern />
     </div>
   );
 };

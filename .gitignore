@@ -10,6 +10,11 @@ lerna-debug.log*
 node_modules
 .next
 out
+
+# env files (secrets) — keep .env.example tracked
+.env
+.env*.local
+!.env.example
 dist
 dist-ssr
 *.local

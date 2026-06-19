@@ -38,7 +38,7 @@ export async function generateMetadata({
   if (!post) return { title: "Artikel nicht gefunden" };
 
   return {
-    title: `${post.title} | KI Kanzlei Blog`,
+    title: `${post.title} Blog`,
     description: post.excerpt,
     alternates: { canonical: `https://ki-kanzlei.at/blog/${post.slug}` },
     openGraph: {

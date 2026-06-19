@@ -17,7 +17,7 @@ export const AnalyticsTracker = () => {
   useEffect(() => {
     const isGInitialized = (window as any).GA_INITIALIZED;
     if (isGInitialized) {
-      const industry = pathname.match(/\/ki-loesungen-([^/]+)/)?.[1] || "home";
+      const industry = pathname.match(/\/branchen\/ki-loesungen-([^/]+)/)?.[1] || "home";
       trackEvent({
         action: GA_EVENTS.PAGE_VIEW,
         category: "navigation",

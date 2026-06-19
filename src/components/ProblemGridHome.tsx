@@ -1,5 +1,6 @@
-import { Clock, FileText, MessageSquare, Users, TrendingDown, Zap } from "lucide-react";
+import { Clock, FileText, MessageSquare, Users, TrendingDown, Zap, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const problems = [
   {
@@ -21,7 +22,7 @@ const problems = [
     size: "medium",
   },
   {
-    icon: Zap,
+    icon: Database,
     title: "Informationen sind fragmentiert",
     description: "Mitarbeiter suchen Antworten in verschiedenen Dokumenten & Wikis statt zentral.",
     size: "large",
@@ -29,7 +30,7 @@ const problems = [
   {
     icon: Clock,
     title: "Verpasste Anrufe und Anfragen",
-    description: "Kunden können nicht erreicht werden, wenn das Team nicht verfügbar ist – wertvolle Leads gehen verloren.",
+    description: "Kunden können nicht erreicht werden, wenn das Team nicht verfügbar ist, wertvolle Leads gehen verloren.",
     size: "medium",
   },
   {
@@ -41,7 +42,7 @@ const problems = [
   {
     icon: Zap,
     title: "Kanal-Chaos bei Kundenanfragen",
-    description: "Anfragen über E-Mail, WhatsApp, Formulare landen überall – kein zentrales System.",
+    description: "Anfragen über E-Mail, WhatsApp, Formulare landen überall, kein zentrales System.",
     size: "medium",
   },
 ];
@@ -51,11 +52,14 @@ export const ProblemGridHome = () => {
     <section id="probleme" className="section-spacing">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
+          <Badge variant="outline" className="rounded-full mb-4 bg-primary/10 text-primary border-primary/20">
+            Probleme & Lösungen
+          </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-up">
             Diese Probleme kennen Sie nur zu gut
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto slide-up">
-            Jeden Tag dieselben manuellen Aufgaben. Zeit, die Sie lieber für Ihr Unternehmen nutzen würden.
+            Jeden Tag dieselben manuellen Aufgaben. Mit gezielter KI Automatisierung gewinnen Sie die Zeit zurück, die Sie lieber für Ihr Unternehmen nutzen.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -64,12 +68,12 @@ export const ProblemGridHome = () => {
             const sizeClasses = {
               small: "md:col-span-1 lg:col-span-1",
               medium: "md:col-span-1 lg:col-span-2",
-              large: "md:col-span-2 lg:col-span-3"
+              large: "md:col-span-2 lg:col-span-3",
             };
             return (
               <div
                 key={index}
-                className={`group p-6 bg-background rounded-2xl border-2 border-border hover-lift cursor-pointer slide-up ${sizeClasses[problem.size as keyof typeof sizeClasses]}`}
+                className={`group p-6 bg-background rounded-2xl border-2 border-border hover-lift hover:border-primary/40 transition-base cursor-pointer slide-up ${sizeClasses[problem.size as keyof typeof sizeClasses]}`}
               >
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-base">
                   <Icon className="w-7 h-7 text-primary" />
@@ -92,4 +96,3 @@ export const ProblemGridHome = () => {
     </section>
   );
 };
-
