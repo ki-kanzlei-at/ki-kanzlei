@@ -209,7 +209,7 @@ export default function Page() {
                       <a href="#contact">Kostenloses Analysegespräch</a>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
-                      <a href="tel:+436642314676">Direkt anrufen</a>
+                      <a href="tel:+43720080697">Direkt anrufen</a>
                     </Button>
                   </div>
                   <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-sm text-muted-foreground">
