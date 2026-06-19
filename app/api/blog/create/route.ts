@@ -41,66 +41,48 @@ async function updateSitemap(
 ): Promise<void> {
   const sitemapPath = "public/sitemap.xml";
   const baseUrl = "https://ki-kanzlei.at";
-  const today = new Date().toISOString().split("T")[0];
 
-  const staticPages = [
-    { loc: "/", lastmod: today, changefreq: "weekly", priority: "1.0" },
-    { loc: "/branchen/ki-loesungen-psychotherapeuten", lastmod: today, changefreq: "weekly", priority: "0.9" },
-    { loc: "/branchen/ki-loesungen-hotels", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-hausverwaltung", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-immobilienmakler", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-autohaus", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-handwerker", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-rechtsanwaelte", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-aerzte", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-recruiting", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-fitness", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-ecommerce", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-oeffentliche-einrichtungen", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-steuerberater", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/branchen/ki-loesungen-versicherungsmakler", lastmod: today, changefreq: "weekly", priority: "0.8" },
-    { loc: "/blog", lastmod: today, changefreq: "weekly", priority: "0.7" },
-    { loc: "/jobs", lastmod: today, changefreq: "monthly", priority: "0.6" },
-    { loc: "/jobs/vertriebspartner-ki", lastmod: today, changefreq: "monthly", priority: "0.5" },
-    { loc: "/jobs/n8n-experte-ki-entwickler", lastmod: today, changefreq: "monthly", priority: "0.5" },
-    { loc: "/impressum", lastmod: "2024-12-19", changefreq: "monthly", priority: "0.3" },
-    { loc: "/datenschutz", lastmod: "2024-12-19", changefreq: "monthly", priority: "0.3" },
-    { loc: "/agb", lastmod: "2024-12-19", changefreq: "monthly", priority: "0.3" },
-  ];
-
-  const blogUrls = blogItems
-    .filter((item) => !item.isArchived && !item.isDraft)
-    .map((item) => ({
-      loc: `/blog/${item.fieldData.slug}`,
-      lastmod: new Date(item.fieldData["create-date"]).toISOString().split("T")[0],
-      changefreq: "monthly",
-      priority: "0.6",
-    }));
-
-  const allUrls = [...staticPages, ...blogUrls];
-  const urlEntries = allUrls
-    .map(
-      (url) =>
-        `  <url>\n    <loc>${baseUrl}${url.loc}</loc>\n    <lastmod>${url.lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`
-    )
-    .join("\n");
-
-  const sitemapXml =
-    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    urlEntries +
-    "\n</urlset>";
-
+  // Read the existing sitemap and preserve every URL except individual blog posts,
+  // which we regenerate. This keeps all Leistungen/Branchen/Vergleich/Produkte URLs
+  // intact instead of rebuilding from a hardcoded (and always-stale) list.
+  let existingXml = "";
   let sha: string | undefined;
   try {
     const { data: fileData } = await octokit.repos.getContent({ owner, repo, path: sitemapPath, ref: branch });
-    if ("sha" in fileData) sha = fileData.sha;
+    if ("content" in fileData && fileData.content) {
+      existingXml = Buffer.from(fileData.content, "base64").toString("utf-8");
+      sha = fileData.sha;
+    }
   } catch (error: any) {
     if (error.status !== 404) throw error;
   }
 
+  // Guard: if we couldn't read the current sitemap, refuse to overwrite it with a
+  // blog-only file (which would drop ~100 URLs).
+  if (!existingXml) {
+    throw new Error("sitemap.xml not readable; skipping update to avoid dropping URLs");
+  }
+
+  const blogSlugLoc = /<loc>[^<]*\/blog\/[^<]+<\/loc>/;
+  const keptBlocks = (existingXml.match(/<url>[\s\S]*?<\/url>/g) || []).filter(
+    (block) => !blogSlugLoc.test(block)
+  );
+
+  const blogBlocks = blogItems
+    .filter((item) => !item.isArchived && !item.isDraft)
+    .map((item) => {
+      const lastmod = new Date(item.fieldData["create-date"]).toISOString().split("T")[0];
+      return `  <url>\n    <loc>${baseUrl}/blog/${item.fieldData.slug}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`;
+    });
+
+  const sitemapXml =
+    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+    [...keptBlocks, ...blogBlocks].join("\n") +
+    "\n</urlset>";
+
   await octokit.repos.createOrUpdateFileContents({
     owner, repo, path: sitemapPath,
-    message: `Update sitemap: ${blogUrls.length} blog posts`,
+    message: `Update sitemap: ${blogBlocks.length} blog posts`,
     content: Buffer.from(sitemapXml).toString("base64"),
     branch, sha,
     committer: { name: "n8n Blog Agent", email: "info@ki-kanzlei.at" },
