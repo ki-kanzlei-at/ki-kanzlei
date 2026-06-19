@@ -15,7 +15,8 @@ export const GA_EVENTS = {
     LINK_CLICK: "link_click",
 } as const;
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// Public measurement ID (also hardcoded in app/layout.tsx gtag). Fallback so event tracking works without env config.
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-G8SDGNWZEB";
 
 export type GAEventName = typeof GA_EVENTS[keyof typeof GA_EVENTS];
 

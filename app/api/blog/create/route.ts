@@ -146,8 +146,9 @@ export async function POST(request: NextRequest) {
     }
 
     const githubToken = process.env.GITHUB_TOKEN;
-    const githubOwner = process.env.GITHUB_OWNER;
-    const githubRepo = process.env.GITHUB_REPO;
+    // owner/repo aren't secrets — default to the org repo so only GITHUB_TOKEN must be set
+    const githubOwner = process.env.GITHUB_OWNER || "ki-kanzlei-at";
+    const githubRepo = process.env.GITHUB_REPO || "ki-kanzlei";
     const githubBranch = process.env.GITHUB_BRANCH || "main";
 
     if (!githubToken || !githubOwner || !githubRepo) {
