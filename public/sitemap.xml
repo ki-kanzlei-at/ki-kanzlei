@@ -942,4 +942,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-gesetz-osterreich-2026-der-praxis-guide-zur-sicheren-umsetzung</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
