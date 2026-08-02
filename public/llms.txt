@@ -11,9 +11,9 @@ Die KI Kanzlei ist ein führendes Beratungs- und Implementierungsunternehmen fü
 - **KI-Beratung:** Strategische und technische Beratung zu KI-Einsatz, Prozessanalyse und Implementierungsplanung.
 
 ## Produkte
-- **firmeo (Outreach-Plattform, Beta):** KI-Outreach-Plattform für Neukundengewinnung: Leadsuche, AI Researcher, Lead-Scoring, E-Mail- und LinkedIn-Kampagnen, Social Media und Unified Inbox, DSGVO-konform. Startet bald in der Beta unter firmeo.ai, Details: /produkte/firmeo
+- **firmeo (Outreach-Plattform, Early Access):** KI-Outreach-Plattform für Neukundengewinnung: Leadsuche, AI Researcher, Lead-Scoring, E-Mail- und LinkedIn-Kampagnen, Social Media und Unified Inbox, DSGVO-konform. Warteliste für den Early Access offen unter https://firmeo.ai, Details: /produkte/firmeo
 - **Individuelle KI-Workflows & Agenten:** Maßgeschneiderte Automatisierung als n8n-Workflows (z. B. LinkedIn-/Cold-Email-Outreach, RAG-Wissensdatenbank, Multi-Channel-Automatisierung) auf Ihre Prozesse zugeschnitten.
-- **In Planung:** eine eigene KI-Wissensdatenbank-App als Produkt. Weitere KI-Produkte folgen Schritt für Schritt.
+- **In Planung:** Weitere KI-Produkte folgen Schritt für Schritt.
 
 ## Branchenspezifische Lösungen
 Wir bieten maßgeschneiderte KI-Systeme für folgende Sektoren:

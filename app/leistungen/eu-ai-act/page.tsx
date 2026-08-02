@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   title:
     "EU AI Act Beratung: Compliance, Risikoklassen & Checkliste",
   description:
-    "EU AI Act Compliance für Unternehmen im DACH-Raum: Risikoklassifizierung, KI-Inventar, Dokumentation und AI Governance. Fristen 2025 bis 2027, Bußgelder bis 35 Mio. EUR und ein klarer Fahrplan zur DSGVO-konformen KI-Nutzung.",
+    "EU AI Act Compliance für Unternehmen im DACH-Raum: Risikoklassifizierung, KI-Inventar, Dokumentation und AI Governance. Transparenzpflichten seit August 2026, Bußgelder bis 35 Mio. EUR und ein klarer Fahrplan zur DSGVO-konformen KI-Nutzung.",
   keywords:
     "EU AI Act, EU AI Act Unternehmen, EU AI Act Compliance, EU AI Act Österreich, EU AI Act Deutschland, EU AI Act Schweiz, EU AI Act Beratung, AI Governance, KI Compliance, EU AI Act Checkliste, EU AI Act Risikostufen, KI Regulierung, AI Act Fristen, KI Verordnung 2024/1689, KI Compliance Beratung DACH, AI Governance Deutschland, KI Compliance Schweiz",
   alternates: { canonical: "https://ki-kanzlei.at/leistungen/eu-ai-act" },
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Was ist der EU AI Act?",
-    a: "Der EU AI Act (Verordnung (EU) 2024/1689) ist die weltweit erste umfassende gesetzliche Regulierung künstlicher Intelligenz. Er ordnet KI-Systeme nach einem risikobasierten Ansatz vier Stufen zu (minimal, begrenzt, hoch, inakzeptabel) und knüpft daran abgestufte Pflichten. In Kraft seit August 2024, gilt er stufenweise bis 2027 und schafft einen einheitlichen Rechtsrahmen für den gesamten EU-Binnenmarkt.",
+    a: "Der EU AI Act (Verordnung (EU) 2024/1689) ist die weltweit erste umfassende gesetzliche Regulierung künstlicher Intelligenz. Er ordnet KI-Systeme nach einem risikobasierten Ansatz vier Stufen zu (minimal, begrenzt, hoch, inakzeptabel) und knüpft daran abgestufte Pflichten. In Kraft seit August 2024, gilt er stufenweise bis 2028 und schafft einen einheitlichen Rechtsrahmen für den gesamten EU-Binnenmarkt.",
   },
   {
     q: "Wen betrifft der EU AI Act konkret?",
@@ -90,7 +90,7 @@ const faqs = [
   },
   {
     q: "Ab wann gelten welche Pflichten?",
-    a: "Die Anwendung erfolgt stufenweise. Seit August 2024 ist die Verordnung in Kraft. Seit Februar 2025 gelten die Verbote und die Pflicht zur KI-Kompetenz der Mitarbeitenden. Seit August 2025 greifen die Regeln für GPAI-Modelle und die Governance-Strukturen. Ab August 2026 gelten die Hochrisiko-Pflichten nach Anhang III, ab August 2027 folgt die volle Anwendung auch für Hochrisiko-KI in regulierten Produkten.",
+    a: "Die Anwendung erfolgt stufenweise. Seit August 2024 ist die Verordnung in Kraft. Seit Februar 2025 gelten die Verbote und die Pflicht zur KI-Kompetenz der Mitarbeitenden. Seit August 2025 greifen die Regeln für GPAI-Modelle und die Governance-Strukturen. Seit dem 2. August 2026 gelten die Transparenzpflichten nach Artikel 50 (Kennzeichnung von Chatbots, Voicebots und KI-generierten Inhalten) und die allgemeine Anwendbarkeit. Die Hochrisiko-Pflichten wurden durch den Digital Omnibus (Verordnung (EU) 2026/1744) verschoben: Anhang III gilt ab Dezember 2027, Hochrisiko-KI in regulierten Produkten nach Anhang I ab August 2028.",
   },
   {
     q: "Muss ich einen KI-Chatbot oder KI-Inhalte kennzeichnen?",
@@ -190,8 +190,8 @@ const ampel = [
 const heroStats = [
   { v: "35 Mio.", l: "EUR maximales Bußgeld" },
   { v: "4", l: "Risikostufen" },
-  { v: "2026", l: "Hochrisiko-Pflichten" },
-  { v: "2027", l: "volle Anwendung" },
+  { v: "2026", l: "Transparenzpflichten aktiv" },
+  { v: "2028", l: "volle Anwendung" },
 ];
 
 const keyFacts = [
@@ -200,8 +200,9 @@ const keyFacts = [
   { k: "Risikostufen", v: "4 (minimal bis inakzeptabel)" },
   { k: "Verbote gelten", v: "seit Februar 2025" },
   { k: "GPAI & Governance", v: "seit August 2025" },
-  { k: "Hochrisiko-Pflichten", v: "ab August 2026" },
-  { k: "Volle Anwendung", v: "ab August 2027" },
+  { k: "Transparenzpflichten (Art. 50)", v: "seit 2. August 2026" },
+  { k: "Hochrisiko Anhang III", v: "ab Dezember 2027 (verschoben)" },
+  { k: "Volle Anwendung", v: "ab August 2028" },
   { k: "Max. Bußgeld", v: "35 Mio. EUR / 7% Umsatz" },
 ];
 
@@ -226,14 +227,20 @@ const timeline = [
   },
   {
     date: "Aug 2026",
+    event: "Transparenzpflichten & allgemeine Anwendbarkeit",
+    detail: "Seit 2. August 2026: Kennzeichnung von Chatbots, Voicebots und KI-generierten Inhalten (Art. 50) sowie allgemeine Anwendbarkeit der Verordnung.",
+    done: true,
+  },
+  {
+    date: "Dez 2027",
     event: "Hochrisiko-KI nach Anhang III",
-    detail: "Risikomanagement, Dokumentation und Registrierung werden Pflicht.",
+    detail: "Durch den Digital Omnibus verschoben: Risikomanagement, Dokumentation und Registrierung werden Pflicht.",
     done: false,
   },
   {
-    date: "Aug 2027",
+    date: "Aug 2028",
     event: "Volle Anwendung",
-    detail: "Hochrisiko-KI in regulierten Produkten vollständig erfasst.",
+    detail: "Hochrisiko-KI in regulierten Produkten (Anhang I) vollständig erfasst.",
     done: false,
   },
 ];
@@ -328,7 +335,7 @@ const gpai = [
 
 const dsgvoCompare = [
   ["Gegenstand", "Schutz personenbezogener Daten", "Inverkehrbringen und Betrieb von KI"],
-  ["In Kraft seit", "2018", "2024, stufenweise bis 2027"],
+  ["In Kraft seit", "2018", "2024, stufenweise bis 2028"],
   ["Ansatz", "datenschutzbasiert", "risikobasiert nach Stufen"],
   ["Zentrale Pflicht", "Rechtsgrundlage und Betroffenenrechte", "Risikoklasse und passende Maßnahmen"],
   ["Max. Bußgeld", "20 Mio. EUR / 4% Umsatz", "35 Mio. EUR / 7% Umsatz"],
@@ -364,7 +371,7 @@ const services = [
   {
     icon: RefreshCw,
     title: "Laufendes Monitoring",
-    desc: "Regelmäßige Reviews, Updates bei Gesetzesänderungen und Vorbereitung auf die nächsten Fristen 2026 und 2027.",
+    desc: "Regelmäßige Reviews, Updates bei Gesetzesänderungen (z. B. Digital Omnibus) und Vorbereitung auf die Hochrisiko-Fristen 2027 und 2028.",
   },
 ];
 
@@ -428,7 +435,7 @@ const checklist = [
   "DSGVO-Kompatibilität sicherstellen: Rechtsgrundlage, Datenhaltung in der EU und Betroffenenrechte prüfen",
   "AI Governance etablieren: Rollen, Verantwortlichkeiten, Freigabe- und Monitoring-Prozesse festlegen",
   "KI-Kompetenz aufbauen: Mitarbeitende zu Funktionsweise, Grenzen und Risiken der Systeme schulen",
-  "Fristen im Blick behalten: Vorbereitung auf August 2026 und August 2027 einplanen",
+  "Fristen im Blick behalten: Transparenzpflichten gelten seit 2. August 2026, Hochrisiko folgt Dezember 2027 (Anhang III) und August 2028 (Anhang I)",
 ];
 
 const steps = [
@@ -547,8 +554,8 @@ export default function Page() {
                     zur sauberen Compliance
                   </h1>
                   <p className="text-lg text-muted-foreground max-w-xl">
-                    Die KI-Verordnung ist in Kraft, ihre Pflichten greifen
-                    stufenweise bis 2027. Wir bringen Ihre KI-Systeme in
+                    Die KI-Verordnung ist in Kraft, seit 2. August 2026 gelten
+                    die Transparenzpflichten. Wir bringen Ihre KI-Systeme in
                     Ordnung: Risikoklasse bestimmen, Pflichten erfüllen,
                     Bußgelder vermeiden. Klar, technisch fundiert und
                     DSGVO-konform.
@@ -702,7 +709,7 @@ export default function Page() {
                     <p>
                       Die Pflichten greifen{" "}
                       <strong className="text-foreground">
-                        stufenweise zwischen 2024 und 2027
+                        stufenweise zwischen 2024 und 2028
                       </strong>
                       . Wer früh ein KI-Inventar aufbaut, Risikoklassen bestimmt
                       und seine Governance aufsetzt, vermeidet teures Nachbessern
@@ -891,7 +898,7 @@ export default function Page() {
                   Zeitplan
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  EU AI Act: Fristen bis 2027
+                  EU AI Act: Fristen bis 2028
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                   Die Pflichten treten gestaffelt in Kraft. So bleibt Zeit zur

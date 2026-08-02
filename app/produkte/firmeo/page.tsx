@@ -99,6 +99,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "firmeo",
+  url: "https://firmeo.ai",
   serviceType: "Outreach-Automatisierung, Lead-Generierung, Multichannel-Akquise",
   provider: { "@type": "ProfessionalService", name: "KI Kanzlei", url: "https://ki-kanzlei.at", telephone: "+436642314676" },
   description:
@@ -131,8 +132,8 @@ export default function Page() {
                     <Badge variant="outline" className="rounded-full bg-primary/10 text-primary border-primary/20">
                       Outreach-Plattform
                     </Badge>
-                    <Badge variant="secondary" className="rounded-full">Beta bald</Badge>
-                    <span className="text-sm text-muted-foreground">powered by <a href="/" className="font-semibold text-foreground hover:text-primary transition-colors">KI Kanzlei</a>, bald unter firmeo.ai</span>
+                    <Badge variant="secondary" className="rounded-full">Warteliste offen</Badge>
+                    <span className="text-sm text-muted-foreground">powered by <a href="/" className="font-semibold text-foreground hover:text-primary transition-colors">KI Kanzlei</a>, jetzt unter <a href="https://firmeo.ai" target="_blank" rel="noopener" className="font-semibold text-foreground hover:text-primary transition-colors">firmeo.ai</a></span>
                   </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                     Neukunden auf <span className="text-primary">Autopilot</span> mit firmeo
@@ -142,7 +143,7 @@ export default function Page() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button size="lg" asChild>
-                      <a href="#contact">Für die Beta vormerken</a>
+                      <a href="https://firmeo.ai/warteliste" target="_blank" rel="noopener">Für den Early Access anmelden</a>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
                       <a href="#module">Funktionen ansehen</a>
@@ -160,7 +161,7 @@ export default function Page() {
                   <CardHeader className="border-b border-border">
                     <div className="flex items-center justify-between">
                       <CardTitle className="text-lg">Eine Plattform, alle Schritte</CardTitle>
-                      <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground"><span className="w-2 h-2 rounded-full bg-amber-500" /> Beta in Kürze</span>
+                      <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground"><span className="w-2 h-2 rounded-full bg-amber-500" /> Warteliste offen</span>
                     </div>
                   </CardHeader>
                   <CardContent className="pt-5 space-y-2.5">
@@ -294,10 +295,10 @@ export default function Page() {
             <div className="container mx-auto px-4 max-w-5xl">
               <div className="rounded-2xl border-2 border-primary/20 bg-primary/5 p-8 md:p-12 text-center">
                 <h2 className="text-2xl md:text-3xl font-bold mb-3">Bereit für Neukunden auf Autopilot?</h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">firmeo startet bald in der Beta. Sichern Sie sich früh einen Zugang oder lassen Sie sich in einem kurzen Gespräch zeigen, wie es für Ihr Angebot funktioniert.</p>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">firmeo startet bald im Early Access, die Warteliste auf firmeo.ai ist offen, mit begrenzten Plätzen und Early-Bird-Preisen. Melden Sie sich früh an oder lassen Sie sich in einem kurzen Gespräch zeigen, wie es für Ihr Angebot funktioniert.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-base">
-                    Für die Beta vormerken <ArrowRight className="w-4 h-4" />
+                  <a href="https://firmeo.ai/warteliste" target="_blank" rel="noopener" className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-base">
+                    Für den Early Access anmelden <ArrowRight className="w-4 h-4" />
                   </a>
                   <a href="#contact" className="inline-flex items-center justify-center rounded-md border border-border bg-card px-7 py-3 text-sm font-semibold hover:border-primary/40 transition-base">Demo anfragen</a>
                 </div>

@@ -26,20 +26,16 @@ import {
 export const metadata: Metadata = {
   title: "KI-Produkte von KI Kanzlei: firmeo & mehr in Entwicklung",
   description:
-    "Die eigenen KI-Produkte der KI Kanzlei. firmeo, unsere Outreach-Plattform, startet bald in der Beta, weitere KI-Produkte sind in Planung. DSGVO-konform, EU-Hosting, Made in Austria.",
+    "Die eigenen KI-Produkte der KI Kanzlei. firmeo, unsere Outreach-Plattform, startet bald im Early Access, die Warteliste auf firmeo.ai ist offen. DSGVO-konform, EU-Hosting, Made in Austria.",
   keywords:
     "KI Produkte, fertige KI-Lösungen, firmeo, Outreach Plattform, KI Agenten, KI Software Produkte, KI Kanzlei Produkte",
   alternates: { canonical: "https://ki-kanzlei.at/produkte" },
 };
 
-const comingSoon = [
-  { icon: Database, title: "KI-Wissensdatenbank", desc: "Ihr Firmenwissen als eigene, durchsuchbare App, quellenbasiert per RAG. In Planung." },
-];
-
 const faqs = [
   {
     q: "Welche KI-Produkte sind geplant?",
-    a: "Unser erstes Produkt firmeo, eine Self-Service-Plattform für automatisierte Neukundengewinnung, ist im Aufbau und startet bald in der Beta: Leads finden, über E-Mail, LinkedIn und Social Media ansprechen und Antworten zentral managen. Weitere KI-Produkte wie eine eigene Wissensdatenbank-App sind in Planung und folgen Schritt für Schritt.",
+    a: "Unser erstes Produkt firmeo, eine Self-Service-Plattform für automatisierte Neukundengewinnung, startet bald im Early Access, die Warteliste auf firmeo.ai ist offen: Leads finden, über E-Mail, LinkedIn und Social Media ansprechen und Antworten zentral managen. Weitere KI-Produkte sind in Planung und folgen Schritt für Schritt.",
   },
   {
     q: "Was, wenn ich jetzt schon mehr brauche?",
@@ -87,7 +83,7 @@ export default function Page() {
                     Unsere <span className="text-primary">KI-Produkte</span>
                   </h1>
                   <p className="text-lg text-muted-foreground max-w-xl">
-                    Wir bauen unsere eigenen KI-Produkte. Den Anfang macht firmeo, unsere Outreach-Plattform, die bald in der Beta startet, weitere sind in Planung.
+                    Wir bauen unsere eigenen KI-Produkte. Den Anfang macht firmeo, unsere Outreach-Plattform, die Warteliste für den Early Access auf firmeo.ai ist offen, weitere sind in Planung.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button size="lg" asChild>
@@ -115,20 +111,15 @@ export default function Page() {
                         <img src="/img/logos/firmeo.svg" alt="firmeo" className="h-5 w-auto" />
                       </span>
                       <span className="text-sm font-semibold">firmeo</span>
-                      <Badge variant="secondary" className="ml-auto rounded-full text-[10px]">Beta bald</Badge>
+                      <Badge variant="secondary" className="ml-auto rounded-full text-[10px]">Warteliste offen</Badge>
                     </div>
-                    {comingSoon.map((p) => {
-                      const Icon = p.icon;
-                      return (
-                        <div key={p.title} className="flex items-center gap-3 rounded-xl border-2 border-dashed border-border bg-background px-3.5 py-2.5 opacity-75">
-                          <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center shrink-0">
-                            <Icon className="w-4 h-4 text-muted-foreground" />
-                          </div>
-                          <span className="text-sm font-medium text-muted-foreground leading-tight">{p.title}</span>
-                          <Badge variant="secondary" className="ml-auto rounded-full text-[10px]">Coming soon</Badge>
-                        </div>
-                      );
-                    })}
+                    <div className="flex items-center gap-3 rounded-xl border-2 border-dashed border-border bg-background px-3.5 py-2.5 opacity-75">
+                      <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center shrink-0">
+                        <Sparkles className="w-4 h-4 text-muted-foreground" />
+                      </div>
+                      <span className="text-sm font-medium text-muted-foreground leading-tight">Weitere Produkte</span>
+                      <Badge variant="secondary" className="ml-auto rounded-full text-[10px]">In Planung</Badge>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -141,53 +132,31 @@ export default function Page() {
               <div className="text-center mb-12">
                 <Badge variant="outline" className="rounded-full mb-4 bg-primary/10 text-primary border-primary/20">Unsere Produkte</Badge>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">firmeo, und was als Nächstes kommt</h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">firmeo startet bald in der Beta. Die nächsten Produkte sind in Planung, bis dahin gibt es jede Lösung auch individuell.</p>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Die Warteliste für den firmeo Early Access ist offen. Die nächsten Produkte sind in Planung, bis dahin gibt es jede Lösung auch individuell.</p>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
-                {/* firmeo, Beta bald */}
+              <div className="max-w-md mx-auto">
+                {/* firmeo, Warteliste offen */}
                 <Card className="border-2 border-primary/30 bg-primary/5 hover-lift flex flex-col h-full">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <span className="inline-flex items-center justify-center bg-white border border-border rounded-xl p-2 shadow-sm">
                         <img src="/img/logos/firmeo.svg" alt="firmeo Logo" className="h-7 w-auto" />
                       </span>
-                      <Badge variant="secondary" className="rounded-full">Beta bald</Badge>
+                      <Badge variant="secondary" className="rounded-full">Warteliste offen</Badge>
                     </div>
                     <CardTitle className="text-xl">firmeo</CardTitle>
                     <CardDescription className="leading-relaxed">
-                      Unsere Outreach-Plattform: Leads finden, über E-Mail, LinkedIn und Social Media ansprechen und Antworten zentral managen. Neukunden auf Autopilot, DSGVO-konform. Die Beta startet in Kürze.
+                      Unsere Outreach-Plattform: Leads finden, über E-Mail, LinkedIn und Social Media ansprechen und Antworten zentral managen. Neukunden auf Autopilot, DSGVO-konform. Die Warteliste für den Early Access ist offen.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="mt-auto flex flex-col gap-3">
                     <a href="/produkte/firmeo" className="inline-flex items-center justify-center gap-1.5 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-base">
                       Details <ArrowRight className="w-4 h-4" />
                     </a>
-                    <a href="#contact" className="text-center text-xs text-muted-foreground hover:text-primary transition-base">Für die Beta vormerken</a>
+                    <a href="https://firmeo.ai/warteliste" target="_blank" rel="noopener" className="text-center text-xs text-muted-foreground hover:text-primary transition-base">Für den Early Access anmelden, auf firmeo.ai</a>
                   </CardContent>
                 </Card>
-
-                {/* coming soon */}
-                {comingSoon.map((p) => {
-                  const Icon = p.icon;
-                  return (
-                    <Card key={p.title} className="border-2 border-dashed flex flex-col h-full">
-                      <CardHeader>
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="w-11 h-11 rounded-xl bg-muted flex items-center justify-center">
-                            <Icon className="w-5 h-5 text-muted-foreground" />
-                          </div>
-                          <Badge variant="secondary" className="rounded-full">Coming soon</Badge>
-                        </div>
-                        <CardTitle className="text-lg text-muted-foreground">{p.title}</CardTitle>
-                        <CardDescription className="leading-relaxed">{p.desc}</CardDescription>
-                      </CardHeader>
-                      <CardContent className="mt-auto">
-                        <span className="text-xs text-muted-foreground">Heute schon als individuelle Lösung möglich.</span>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
               </div>
             </div>
           </section>

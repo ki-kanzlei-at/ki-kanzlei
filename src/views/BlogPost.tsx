@@ -60,6 +60,11 @@ const BlogPost = ({ initialPost, initialPosts }: BlogPostProps) => {
                 )}
               </div>
 
+              {/* KI-Kennzeichnung nach Art. 50 EU AI Act */}
+              <p className="text-xs text-muted-foreground mb-6">
+                Transparenzhinweis: Dieser Beitrag wurde mit KI erstellt.
+              </p>
+
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 {currentPost.title}
               </h1>
