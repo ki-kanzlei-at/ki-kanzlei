@@ -127,7 +127,6 @@ const filesByName: Record<string, string> = {
   "nextjs": "nextdotjs.svg",
   // Voice & eigene
   "fonio": "fonio.webp",
-  "firmeo": "firmeo.svg",
 };
 
 function normalize(name: string): string {

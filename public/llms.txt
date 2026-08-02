@@ -11,7 +11,6 @@ Die KI Kanzlei ist ein führendes Beratungs- und Implementierungsunternehmen fü
 - **KI-Beratung:** Strategische und technische Beratung zu KI-Einsatz, Prozessanalyse und Implementierungsplanung.
 
 ## Produkte
-- **firmeo (Outreach-Plattform, Early Access):** KI-Outreach-Plattform für Neukundengewinnung: Leadsuche, AI Researcher, Lead-Scoring, E-Mail- und LinkedIn-Kampagnen, Social Media und Unified Inbox, DSGVO-konform. Warteliste für den Early Access offen unter https://firmeo.ai, Details: /produkte/firmeo
 - **Individuelle KI-Workflows & Agenten:** Maßgeschneiderte Automatisierung als n8n-Workflows (z. B. LinkedIn-/Cold-Email-Outreach, RAG-Wissensdatenbank, Multi-Channel-Automatisierung) auf Ihre Prozesse zugeschnitten.
 - **In Planung:** Weitere KI-Produkte folgen Schritt für Schritt.
 
@@ -68,7 +67,6 @@ Wir suchen laufend Unterstützung in folgenden Bereichen:
 ### Zentrale Seiten & Hubs
 - [/leistungen](https://ki-kanzlei.at/leistungen) - Leistungen
 - [/branchen](https://ki-kanzlei.at/branchen) - Branchen
-- [/produkte](https://ki-kanzlei.at/produkte) - Produkte
 - [/ki-assessment](https://ki-kanzlei.at/ki-assessment) - KI Assessment
 - [/ki-glossar](https://ki-kanzlei.at/ki-glossar) - KI Glossar
 - [/blog](https://ki-kanzlei.at/blog) - Blog
@@ -134,7 +132,6 @@ Wir suchen laufend Unterstützung in folgenden Bereichen:
 - [/leistungen/zapier](https://ki-kanzlei.at/leistungen/zapier) - Zapier
 
 ### Produkte
-- [/produkte/firmeo](https://ki-kanzlei.at/produkte/firmeo) - Firmeo
 
 ### Branchen-Lösungen (alle)
 - [/branchen/ki-loesungen-aerzte](https://ki-kanzlei.at/branchen/ki-loesungen-aerzte) - KI für Aerzte

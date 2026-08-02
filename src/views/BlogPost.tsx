@@ -60,10 +60,16 @@ const BlogPost = ({ initialPost, initialPosts }: BlogPostProps) => {
                 )}
               </div>
 
-              {/* KI-Kennzeichnung nach Art. 50 EU AI Act */}
-              <p className="text-xs text-muted-foreground mb-6">
-                Transparenzhinweis: Dieser Beitrag wurde mit KI erstellt.
-              </p>
+              {/* KI-Kennzeichnung nach Art. 50 EU AI Act, Badge nach EU-Vorschlag (AI GENERATED) */}
+              <div className="mb-6 flex items-center gap-2.5">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-background select-none">
+                  AI
+                  <span className="font-semibold tracking-[0.12em]">Generated</span>
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  Dieser Beitrag wurde mit KI erstellt.
+                </span>
+              </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 {currentPost.title}

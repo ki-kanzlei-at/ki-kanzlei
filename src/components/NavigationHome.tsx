@@ -186,7 +186,6 @@ export const NavigationHome = () => {
   };
 
   const menuItems = [
-    { label: "Produkte", href: "/produkte" },
     { label: "Über uns", href: "/ueber-uns" },
     { label: "Blog", href: "/blog" },
     { label: "Jobs", href: "/jobs" },

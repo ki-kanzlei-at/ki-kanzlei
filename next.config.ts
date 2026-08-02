@@ -98,6 +98,9 @@ const nextConfig: NextConfig = {
         destination: `/branchen/${slug}`,
         permanent: true,
       })),
+      // firmeo ist eine eigenständige Firma (firmeo.ai), Produktseiten entfernt
+      { source: "/produkte/firmeo", destination: "/", permanent: true },
+      { source: "/produkte", destination: "/", permanent: true },
     ];
   },
 };

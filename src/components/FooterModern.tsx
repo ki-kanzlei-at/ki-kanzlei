@@ -75,9 +75,7 @@ export const FooterModern = () => {
           </div>
 
           <div className="kk-foot-col">
-            <h5>Produkte, Wissen & Firma</h5>
-            <a href="/produkte">Produkte</a>
-            <a href="/produkte/firmeo">firmeo (Warteliste offen)</a>
+            <h5>Wissen & Firma</h5>
             <a href="/ki-assessment">KI Assessment Center</a>
             <a href="/ki-glossar">KI-Glossar</a>
             <a href="/blog">Blog</a>
