@@ -966,4 +966,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/gefahren-von-ki-im-alltag-sicherheit-fur-osterreichs-kmu-2026</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
